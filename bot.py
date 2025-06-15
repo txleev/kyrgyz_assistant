@@ -11,7 +11,7 @@ from sentence_transformers import SentenceTransformer
 import faiss
 
 # === CONFIG ===
-BOT_TOKEN = "8063276859:AAE1CoVG_jj-Kxn4PHxuM_PqpghzVNHs-JQ"
+BOT_TOKEN = "<token>"
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -79,7 +79,7 @@ async def chat_with_rag(prompt):
         "temperature": 0.7
     }
     try:
-        response = requests.post('http://192.168.88.107:11434/api/generate', json=payload)
+        response = requests.post('localhost:11434/api/generate', json=payload)
         return response.json().get('response', '')
     except Exception as e:
         return f"Error contacting Ollama: {e}"
