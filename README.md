@@ -1,4 +1,4 @@
-# 🎙️ Jarchy AI — Kyrgyz Speech-to-Speech Assistant
+# 🎧 Jarchy AI — Kyrgyz Speech-to-Speech Assistant
 
 Jarchy AI is the **first open-source Kyrgyz-language speech-to-speech assistant**, built using `Aiogram`, local LLMs, STT, and TTS technologies. Designed as a prototype for the hackathon, it allows users to send **voice messages in Kyrgyz** and receive back **spoken AI responses** — directly through **Telegram**.
 
@@ -13,13 +13,13 @@ https://youtu.be/your-demo-link (replace this with your video link)
 ## 🧠 What Jarchy AI Does
 
 - 🎤 **Speech Recognition (STT)**: Converts user voice messages to text (e.g., Whisper or custom model)
-- 🤖 **AI Processing**: Local LLM (Ollama + Gemma3) refines and answers in Kyrgyz
+- 🧠 **AI Processing**: Local LLM (Ollama + Gemma3) refines and answers in Kyrgyz
 - 🔊 **Text-to-Speech (TTS)**: Generates a natural Kyrgyz voice reply
 - 💬 **Telegram Bot Interface**: Built with `aiogram` for seamless interaction
 
 ---
 
-## 🧩 Tech Stack
+## 🧹 Tech Stack
 
 | Component        | Tool / Framework            |
 |------------------|-----------------------------|
@@ -42,70 +42,106 @@ git clone https://github.com/your-username/jarchy-ai.git
 cd jarchy-ai
 ```
 
-Install dependencies
-
-bash
-Копировать
-Редактировать
+2. **Install dependencies**
+```bash
 pip install -r requirements.txt
-Set up Ollama
+```
 
-Download and run the Ollama server locally
-
-Ensure Gemma3 is installed:
-
-bash
-Копировать
-Редактировать
+3. **Set up Ollama**
+- Download and run the [Ollama](https://ollama.ai) server locally
+- Ensure Gemma3 is installed:
+```bash
 ollama run gemma3:12b
-Set Telegram bot token
+```
 
-bash
-Копировать
-Редактировать
+4. **Set Telegram bot token**
+```bash
 export BOT_TOKEN=your-telegram-token
-Run the bot
+```
 
-bash
-Копировать
-Редактировать
+5. **Run the bot**
+```bash
 python main.py
-🎯 Vision
-Jarchy AI is more than a voice bot — it’s a Kyrgyz AI assistant prototype designed to:
+```
 
-Make AI more accessible to Kyrgyz speakers
+---
 
-Work offline using local models
+## 🌟 Vision
 
-Support contextual memory and RAG in the future
+Jarchy AI is more than a voice bot — it’s a **Kyrgyz AI assistant** prototype designed to:
 
-Expand to mobile and web platforms
+- Make AI more **accessible** to Kyrgyz speakers
+- Work offline using **local models**
+- Support **contextual memory** and **RAG** in the future
+- Expand to **mobile** and **web** platforms
 
-🧪 Planned Features
- RAG with FAISS + SQLite (conversation memory)
+---
 
- Live whisper STT streaming
+## 🧪 Planned Features
 
- Multi-user memory support
+- [ ] RAG with FAISS + SQLite (conversation memory)
+- [ ] Live whisper STT streaming
+- [ ] Multi-user memory support
+- [ ] Web UI version
+- [ ] Advanced emotion-aware TTS
 
- Web UI version
+---
 
- Advanced emotion-aware TTS
+## 👥 Team
 
-👥 Team
-Name	Role
-[Your Name]	Developer / AI Lead
-[Teammate]	Bot Dev / Voice
-[Teammate]	Design & Demo
+| Name        | Role             |
+|-------------|------------------|
+| [Your Name] | Developer / AI Lead |
+| [Teammate]  | Bot Dev / Voice |
+| [Teammate]  | Design & Demo  |
 
-📜 License
+---
+
+## 📜 License
+
 MIT — feel free to use, remix, and build on top of Jarchy AI.
 
-❤️ Acknowledgments
-Kyrgyz language community
+---
 
-Whisper by OpenAI
+## ❤️ Acknowledgments
 
-Ollama for local LLMs
+- Kyrgyz language community
+- Whisper by OpenAI
+- Ollama for local LLMs
+- Aiogram community
 
-Aiogram community
+---
+
+## 📘 AI Usage Log
+
+### 🛠️ Tools Used
+
+| Tool                | Purpose                                             |
+|---------------------|-----------------------------------------------------|
+| **Ollama + Gemma 3**  | Local Large Language Model used to generate refined answers in Kyrgyz |
+| **Whisper (or custom STT)** | Used for converting Kyrgyz voice messages into text (speech-to-text) |
+| **TTS-Mini**        | Generated Kyrgyz voice replies from text responses |
+| **ChatGPT**         | Assisted in writing Python code, error fixing, optimizing logic, and generating documentation |
+| **FAISS + SentenceTransformers** (planned) | For future RAG (Retrieval-Augmented Generation) system to refer to past conversation memory |
+
+### 🧠 How AI Was Used in the Creative Process
+
+| Phase                        | How AI Was Used                                                                                  |
+|-----------------------------|---------------------------------------------------------------------------------------------------|
+| 🔧 **Coding & Debugging**       | We used ChatGPT to help write Aiogram logic, SQLite storage functions, FAISS indexing, and general code organization. |
+| 💬 **Language Model Responses**| We used Ollama running locally with Gemma 3 model to generate chatbot responses in Kyrgyz. |
+| 🧠 **Idea Validation**         | We discussed design trade-offs and technical feasibility with ChatGPT (e.g., storing conversation in SQLite, integrating voice pipelines). |
+| 📝 **Documentation**           | ChatGPT was used to write this README, the AI Usage Log, and outline the pitch video script. |
+
+### 📊 AI Involvement Estimate
+
+| Task Area                 | AI Involvement % | Description                                                                 |
+|--------------------------|------------------|-----------------------------------------------------------------------------|
+| 🧠 LLM Response Generation | 100%             | All responses are generated by a local language model (Gemma 3 via Ollama) |
+| 📜 Code Development        | ~50%             | Core logic written by team, ChatGPT helped with refinement and bugfixing   |
+| 🔈 STT / TTS Integration   | ~20%             | AI voice components researched with GPT, but implemented manually          |
+| 📝 Documentation & Scripts| ~90%             | Most of the writing was supported or generated by ChatGPT                  |
+
+**📎 Total Project AI Assistance: ~60%**
+
+This project was developed as a collaborative effort between human creativity and AI tools. While the logic and direction came from the team, AI helped us move faster, write cleaner code, and polish the experience in record time.
